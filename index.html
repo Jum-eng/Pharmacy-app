@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHARMACY MANAGEMENT SYSTEM</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Pharmacy Management System</h1>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <h3>Add Drug</h3>
+                <form id="addDrugForm">
+                    <div class="form-group">
+                        <label for="code">Code</label>
+                        <input type="text" class="form-control" id="code" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <input type="text" class="form-control" id="description" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Price</label>
+                        <input type="number" class="form-control" id="price" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Drug</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h3>Search Drug</h3>
+                <form id="searchDrugForm">
+                    <div class="form-group">
+                        <label for="searchName">Search by Name</label>
+                        <input type="text" class="form-control" id="searchName" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+                <h3 class="mt-4">Drugs List</h3>
+                <table class="table table-bordered mt-3">
+                    <thead>
+                        <tr>
+                            <th>Code</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody id="drugsTableBody">
+                        <!-- Data will be injected here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="pharmacy.js"></script>
+</body>
+</html>
